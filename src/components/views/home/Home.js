@@ -28,7 +28,7 @@ const Home = () => {
       <div className="container">
         <div className="row cards-cont">
           { games && games.map((game, i) => (
-              <div key={i} className="col-6 col-md-4 col-lg-3 card-col" >
+              <div key={i} className="col-4  card-col" >
                 <div className="card">
                   {game.Place}
                   {game.DateTime}
