@@ -28,10 +28,19 @@ const Home = () => {
       <div className="container">
         <div className="row cards-cont">
           { games && games.map((game, i) => (
-              <div key={i} className="col-4  card-col" >
+              <div key={i} className="col-12 col-sm-6 col-md-6 col-lg-4 card-col" >
                 <div className="card">
-                  {game.Place}
-                  {game.DateTime}
+                  <h2 className="title">
+                    {game.Place}
+                  </h2>
+                  <p className="date">
+                    {(new Date(game.DateTime).toLocaleDateString())}
+                  </p>
+                  <p className="text">
+                    Number of PLayers: {game.Players}
+                    <br/>
+                    Game Mode: {game.Mode}
+                  </p>
                 </div>
               </div>
             ))
